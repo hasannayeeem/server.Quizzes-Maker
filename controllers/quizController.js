@@ -8,6 +8,8 @@ const createQuizDemo = asyncHandler(async (req, res) => {
       image,
       description,
       quizType,
+      timeType,
+      resultType,
       retakeCount,
       allQTime,
     } = req.body;
@@ -17,6 +19,8 @@ const createQuizDemo = asyncHandler(async (req, res) => {
         image,
         description,
         quizType,
+        timeType,
+        resultType,
         retakeCount,
         allQTime,
     });

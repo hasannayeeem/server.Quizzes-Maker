@@ -18,7 +18,10 @@ const quizModel = new mongoose.Schema(
       type: String,
       require: true,
     },
-    typeOfQuizTime: {
+    resultType: {
+      type: String,
+    },
+    timeType: {
       type: String,
     },
     allQTime: {
