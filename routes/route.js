@@ -36,6 +36,10 @@ const {
 const {
 	createPayment, 
 	getAllPayment,
+	getSinglePayment,
+	updatePayment,
+	singlePaymentByEmail,
+	deletePayment,
 } = require('../controllers/paymentController');
 
 
@@ -70,6 +74,10 @@ router.post("/createQuestionDemo", createQuizQuestion);
 // payment routes 
 router.post('/createPayment', createPayment);
 router.get('/getAllPayment', getAllPayment);
+router.get('/getSinglePayment', getSinglePayment);
+router.put('/updatePayment', updatePayment);
+router.get('/singlePaymentByEmail/:email', singlePaymentByEmail);
+router.delete('/deletePayment/:id', deletePayment);
 
 
 module.exports = router;

@@ -39,6 +39,15 @@ Connection(USERNAME, PASSWORD);
 			clientSecret: paymentIntent.client_secret,
 		});
 	})
+// refund payment
+	app.post('/refund-payment-intent', async (req, res) => {
+		const {transactionID}  = req.body;
+		// Create a PaymentIntent with the order amount and currency
+		const refund = await stripe.refunds.create({payment_intent: transactionID.tId});
+		res.send({
+			refund,
+		});
+	})
 
 
 app.use('/api/v1', router)

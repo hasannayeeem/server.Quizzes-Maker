@@ -17,6 +17,11 @@ const paymentModel = new mongoose.Schema(
     amount: {
       type: String,
     },
+    refund: {
+      type: String,
+      default: 'false',
+      require: true,
+    },
   },
   {
     timestamps: true,
